@@ -53,7 +53,11 @@ const ContactState = (props) => {
     };
 
     try {
-      const res = await axios.post('/api/contacts', contact, config);
+      const res = await axios.post(
+        'https://intense-coast-01312.herokuapp.com/api/contacts',
+        contact,
+        config
+      );
 
       dispatch({
         type: ADD_CONTACT,
